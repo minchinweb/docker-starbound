@@ -27,6 +27,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
 
       - name: Set Environmental Variables
         run: |
@@ -36,6 +38,10 @@ jobs:
           export IMAGE_NAME=${IMAGE_NAME_2,,}
           echo Image Name: $IMAGE_NAME
           echo "IMAGE_NAME=${IMAGE_NAME}" >> $GITHUB_ENV
+
+          export VERSION=$(git describe --tags --always)
+          echo Version: $VERSION
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
           export BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
           echo Build Date: $BUILD_DATE

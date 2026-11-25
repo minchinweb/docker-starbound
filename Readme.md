@@ -18,7 +18,7 @@ directory `/app`. If you own the game on Steam, you can download it with
 Note that this will also download all your subscribed mods. The above command
 can be run on Windows and will download the linux version of the game. It may
 ask you for your password, and a one-time code (if you have SteamGuard/2FA
-active) (your password can also be provided from the commandline).
+active).
 
 Now copy over the server executable and the game assets over. In the end, you'll have something like this:
 
@@ -87,7 +87,7 @@ The included default starbound config (at `/config/sbinit.config`):
         "defaultConfiguration" : {
             "gameServerBind" : "*",
             "queryServerBind" : "*",
-            "rconServerBind" : "*"
+            "rconServerBind" : "127.0.0.1"
         }
     }
 
