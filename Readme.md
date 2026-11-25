@@ -17,7 +17,7 @@ directory `/app`. If you own the game on Steam, you can download it with
 
 Note that this will also download all your subscribed mods. The above command
 can be run on Windows and will download the linux version of the game. It may
-ask you for your password, and a one-time code (if you have SteamGaurd/2FA
+ask you for your password, and a one-time code (if you have SteamGuard/2FA
 active) (your password can also be provided from the commandline).
 
 Now copy over the server executable and the game assets over. In the end, you'll have something like this:
@@ -60,9 +60,9 @@ You can also add mods. One "trick" is that the directories specified in
 directly as Steam downloads them, you'll have to list each folder individually.
 Personally, I'll rename Steam's `contents.pak` to the `<steam Id>.pak` and drop
 them into the root mods folder. (The root mods folder is set up to be picked up
-my the included default configuration.)
+by the included default configuration.)
 
-The `mods` folder in a subfolder of the mounted `config` folder. Something like this:
+The `mods` folder is a subfolder of the mounted `config` folder. Something like this:
 
     config
       `- mods
@@ -74,7 +74,7 @@ The server runs on port 21025 (which Docker exposes).
 
 ## Default Starbound Config
 
-The included default starbound config (at `/config/sbinit.conf`):
+The included default starbound config (at `/config/sbinit.config`):
 
     {
         "assetDirectories" : [
